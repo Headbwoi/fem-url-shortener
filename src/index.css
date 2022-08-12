@@ -5,3 +5,14 @@
 .cta-base {
   @apply rounded-full bg-Cyan text-white font-bold capitalize grid place-items-center hover:opacity-50 duration-200;
 }
+.fade-in {
+  animation: fadein 500ms ease-in-out;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
