@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.cta-base {
+  @apply rounded-full bg-Cyan text-white font-bold capitalize grid place-items-center hover:opacity-50 duration-200;
+}

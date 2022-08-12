@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{ts.tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
       sm: "540px",
@@ -18,6 +18,7 @@ module.exports = {
       Grayish_Violet: "hsl(257, 7%, 63%)",
       Very_Dark_Blue: "hsl(255, 11%, 22%)",
       Very_Dark_Violet: "hsl(260, 8%, 14%)",
+      white: "hsl(0, 0%, 100%)",
     },
     fontFamily: {
       poppins: [`"Poppins", sans-serif`],
