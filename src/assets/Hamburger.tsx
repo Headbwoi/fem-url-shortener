@@ -13,7 +13,7 @@ const Hamburger = () => {
         transform="translate(0 1)"
         fill="none"
         stroke="#707070"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <line
         id="Line_2"
@@ -22,7 +22,7 @@ const Hamburger = () => {
         transform="translate(0 10)"
         fill="none"
         stroke="#707070"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <line
         id="Line_3"
@@ -31,7 +31,7 @@ const Hamburger = () => {
         transform="translate(0 20)"
         fill="none"
         stroke="#707070"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   )
