@@ -10,10 +10,15 @@ const UrlShortener = () => {
   const handleUrlInput = (e: any) => {
     e.preventDefault()
   }
+  const validateInput = () => {
+    let checkState = false
+    urlValue === "" ? checkState : !checkState
+    return checkState
+  }
   return (
     <div className="url-container md:w-full absolute -top-[6.6875rem] md:-top-[5.3125rem] left-1/2 -translate-x-1/2  overflow-x-hidden">
       <div
-        className="rounded-lg h-[13.375rem] md:h-[10.625rem] bg-Dark_Violet bg-[url('src/assets/bg-shorten-mobile.svg')] md:bg-[url('src/assets/bg-shorten-desktop.svg')] bg-no-repeat bg-right-top md:bg-center mb-5  flex items-center justify-between px-6 md:px-16"
+        className="rounded-lg h-[13.375rem] md:h-[10.625rem] bg-Dark_Violet bg-[url('./assets/bg-shorten-mobile.svg')] md:bg-[url('./assets/bg-shorten-desktop.svg')] bg-no-repeat bg-right-top md:bg-center mb-5  flex items-center justify-between px-6 md:px-16"
         onSubmit={handleUrlInput}
       >
         <form className="flex items-center justify-between flex-col md:flex-row relative w-full">
@@ -26,11 +31,13 @@ const UrlShortener = () => {
               placeholder="Shorten a link here..."
               onChange={(e) => setUrlValue(e.target.value)}
             />
-            {/* <p className="text-base text-Red italic">Please add a link</p> */}
+
+            {/*  <p className="text-base text-Red italic">Please add a link</p>*/}
           </div>
           <button
             type="submit"
             className="w-full md:w-[11.875rem] h-12 md:h-16 cta-secondary rounded-md"
+            onClick={validateInput}
           >
             Shorten It!
           </button>
