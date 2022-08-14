@@ -1,11 +1,11 @@
 import Illustration from "../../assets/illustration-working.svg"
 const HeroSection = () => {
   return (
-    <section className="relative ">
+    <section className="relative mb-[9.1825rem] md:mb-[13.75rem]">
       <div className="container flex items-center justify-between flex-col md:flex-row-reverse">
         {/* image */}
-        {/* <div className="image w-[30.1875rem] translate-x-24   relative"> */}
-        <div className="h-[21.375rem] lg:h-[30.1875rem] ">
+
+        <div className="w-[30.1875rem] h-[21.375rem] translate-x-24 lg:h-[30.1875rem] ">
           <img
             src={Illustration}
             alt="illustration"
@@ -17,10 +17,13 @@ const HeroSection = () => {
           <h1 className="font-bold text-3xl md:text-6xl lg:text mb-7">
             More than just shorter links
           </h1>
-          <p className="text-lg md:text-2xl font-medium">
+          <p className="text-lg md:text-2xl font-medium mb-9  md:mb-10">
             Build your brand’s recognition and get detailed insights on how your
             links are performing.
           </p>
+          <a href="#url" className="cta-base mx-auto md:mx-0 h-14 w-[12.5rem] ">
+            Get Started
+          </a>
         </div>
         <img
           src={Illustration}

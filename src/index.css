@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 .cta-base {
-  @apply rounded-full bg-Cyan text-white font-bold capitalize grid place-items-center hover:opacity-50 duration-200;
+  @apply rounded-full bg-Cyan text-lg text-white font-bold capitalize grid place-items-center hover:saturate-150 duration-200;
+}
+.cta-secondary {
+  @apply rounded-md bg-Cyan text-lg text-white font-bold capitalize grid place-items-center hover:saturate-150 duration-200;
 }
 .fade-in {
   animation: fadein 500ms ease-in-out;
@@ -15,4 +18,7 @@
   100% {
     opacity: 1;
   }
+}
+.url-container {
+  width: calc(100vw - 48px);
 }

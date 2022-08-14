@@ -1,12 +1,18 @@
 import Header from "./components/Header/Header"
+import BoostSection from "./components/Main/BoostSection"
+import FeaturesSection from "./components/Main/FeaturesSection"
+import Footer from "./components/Main/Footer"
 import HeroSection from "./components/Main/HeroSection"
 
 function App() {
   return (
-    <main className="overflow-x-hidden ">
+    <>
       <Header />
       <HeroSection />
-    </main>
+      <FeaturesSection />
+      <BoostSection />
+      <Footer />
+    </>
   )
 }
 
