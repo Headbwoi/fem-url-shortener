@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react"
 import ShortenedLinkCard from "./ShortenedLinkCard"
 
-export interface Props {
-  oldLink: string
-  newLink?: string
-}
 const UrlShortener = () => {
-  const getStoredLinks = JSON.parse(localStorage.getItem("links") || "")
+  //@ts-ignore
+  const getStoredLinks = JSON.parse(localStorage.getItem("links"))
   const [urlValue, setUrlValue] = useState("")
   const [error, setError] = useState(false)
   const [storedLinks, setStoredLinks] = useState(getStoredLinks)
@@ -63,7 +60,7 @@ const UrlShortener = () => {
       {/* links preview */}
 
       <div className="w-full space-y-4">
-        {storedLinks.length !== 0 &&
+        {storedLinks &&
           storedLinks.map((link: any) => {
             return (
               <ShortenedLinkCard key={storedLinks.indexOf(link)} data={link} />
