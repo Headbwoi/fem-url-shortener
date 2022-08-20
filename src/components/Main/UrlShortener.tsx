@@ -61,17 +61,14 @@ const UrlShortener = () => {
           </form>
         </div>
         {/* links preview */}
-        <div className="w-full space-y-4">
-          {storedLinks.length !== 0 &&
-            storedLinks.map((link: any) => {
-              return (
-                <ShortenedLinkCard
-                  key={storedLinks.indexOf(link)}
-                  data={link}
-                />
-              )
-            })}
-        </div>
+      </div>
+      <div className="w-full pt-[135px] md:pt-[120px] space-y-4">
+        {storedLinks.length !== 0 &&
+          storedLinks.map((link: any) => {
+            return (
+              <ShortenedLinkCard key={storedLinks.indexOf(link)} data={link} />
+            )
+          })}
       </div>
     </>
   )

@@ -4,7 +4,7 @@ import IconFullyCustomizable from "../../assets/IconFullyCustomizable"
 
 const Statistics = () => {
   return (
-    <div className="">
+    <div className="pt-[80px] md:pt-[120px]">
       <Heading />
       <Statfeatures />
     </div>
@@ -14,7 +14,7 @@ const Statistics = () => {
 export default Statistics
 function Heading() {
   return (
-    <div className="px-6 md:px-0 text-center md:w-[25.25rem] mx-auto mb-14 md:mb-16">
+    <div className="px-6 md:px-0 text-center md:w-[25.25rem] mx-auto">
       <h2 className="text-2xl md:text-3xl font-bold mb-[2.125rem]">
         Advanced Statistics
       </h2>
@@ -28,7 +28,7 @@ function Heading() {
 
 const Statfeatures = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 ">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 mt-24 md:mt-28">
       {/* card one */}
       <div className="h-[17.875rem] bg-white rounded-md w-full text-center md:text-left px-8 pb-11 relative z-20">
         <div className="grid place-items-center h-[5.625rem] w-[5.625rem] rounded-full bg-Dark_Violet -mt-[2.8175rem] mx-auto mb-7">
