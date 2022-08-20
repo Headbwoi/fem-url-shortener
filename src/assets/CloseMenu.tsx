@@ -14,7 +14,7 @@ const CloseMenu = () => {
         transform="translate(0.707 0.707)"
         fill="none"
         stroke="#707070"
-        stroke-width="2"
+        strokeWidth="2"
       />
       <line
         id="Line_2"
@@ -24,7 +24,7 @@ const CloseMenu = () => {
         transform="translate(0.707 0.707)"
         fill="none"
         stroke="#707070"
-        stroke-width="2"
+        strokeWidth="2"
       />
     </svg>
   )

@@ -1,8 +1,11 @@
-import Facebook from "../../assets/Facebook"
-import Instagram from "../../assets/Instagram"
-import LogoWhite from "../../assets/LogoWhite"
-import Pinterest from "../../assets/Pinterest"
-import TwitterIcon from "../../assets/TwitterIcon"
+import {
+  Facebook,
+  Instagram,
+  LogoWhite,
+  Pinterest,
+  TwitterIcon,
+} from "../../assets"
+
 interface Link {
   linkName: string
 }

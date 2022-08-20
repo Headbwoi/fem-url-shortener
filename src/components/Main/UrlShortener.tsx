@@ -10,7 +10,7 @@ const UrlShortener = () => {
 
   useEffect(() => {
     localStorage.setItem("links", JSON.stringify(storedLinks))
-  }, [storedLinks])
+  })
 
   const shortenLink = async (e: any) => {
     e.preventDefault()
@@ -19,13 +19,16 @@ const UrlShortener = () => {
 
     const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${editedUrl}`)
     const responseData = await res.json()
-    console.log(responseData)
     responseData.ok
       ? setStoredLinks([...storedLinks, responseData.result])
       : setError(true)
     setUrlValue("")
   }
-
+  const deleteUrl = (tag: any) => {
+    storedLinks.splice(tag, 1)
+    localStorage.setItem("links", JSON.stringify(storedLinks))
+    window.location.reload()
+  }
   return (
     <>
       <div className="url-container md:w-full absolute -top-[6.6875rem] md:-top-[5.3125rem] left-1/2 -translate-x-1/2  overflow-x-hidden">
@@ -66,7 +69,12 @@ const UrlShortener = () => {
         {storedLinks.length !== 0 &&
           storedLinks.map((link: any) => {
             return (
-              <ShortenedLinkCard key={storedLinks.indexOf(link)} data={link} />
+              <ShortenedLinkCard
+                key={storedLinks.indexOf(link)}
+                id={storedLinks.indexOf(link)}
+                data={link}
+                deleteUrl={deleteUrl}
+              />
             )
           })}
       </div>

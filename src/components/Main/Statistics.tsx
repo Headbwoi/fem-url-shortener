@@ -1,6 +1,8 @@
-import IconBrandRecognition from "../../assets/IconBrandRecognition"
-import IconDetailedRecords from "../../assets/IconDetailedRecords"
-import IconFullyCustomizable from "../../assets/IconFullyCustomizable"
+import {
+  IconBrandRecognition,
+  IconDetailedRecords,
+  IconFullyCustomizable,
+} from "../../assets"
 
 const Statistics = () => {
   return (
