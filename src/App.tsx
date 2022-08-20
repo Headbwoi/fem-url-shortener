@@ -1,8 +1,10 @@
-import Header from "./components/Header/Header"
-import HeroSection from "./components/Main/HeroSection"
-import BoostSection from "./components/Main/BoostSection"
-import FeaturesSection from "./components/Main/FeaturesSection"
-import Footer from "./components/Main/Footer"
+import { Header } from "./components/Header"
+import {
+  HeroSection,
+  FeaturesSection,
+  BoostSection,
+  Footer,
+} from "./components/Main"
 
 function App() {
   return (

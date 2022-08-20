@@ -3,7 +3,7 @@ import ShortenedLinkCard from "./ShortenedLinkCard"
 
 const UrlShortener = () => {
   //@ts-ignore
-  const getStoredLinks = JSON.parse(localStorage.getItem("links"))
+  const getStoredLinks = JSON.parse(localStorage.getItem("links")) ?? []
   const [urlValue, setUrlValue] = useState("")
   const [error, setError] = useState(false)
   const [storedLinks, setStoredLinks] = useState(getStoredLinks)
@@ -62,7 +62,7 @@ const UrlShortener = () => {
         </div>
         {/* links preview */}
         <div className="w-full space-y-4">
-          {storedLinks &&
+          {storedLinks.length !== 0 &&
             storedLinks.map((link: any) => {
               return (
                 <ShortenedLinkCard
